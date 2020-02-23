@@ -25,3 +25,27 @@
     ]
   ];
 ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>snack 4</title>
+  </head>
+  <body>
+    <?php
+    foreach ($db as $key => $value) {
+        echo "<div class=" . $key . ">";
+      for ($i=0; $i < count($value); $i++) {
+        echo "<p>";
+        foreach ($value[$i] as $keyy) {
+        echo $keyy . " ";
+        }
+        echo "</p>";
+      }
+      echo "</div>";
+    }
+    ?>
+  </body>
+</html>
